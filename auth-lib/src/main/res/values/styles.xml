@@ -14,4 +14,9 @@
     <style name="DialogNoTitle" parent="Theme.AppCompat.Dialog.Alert">
         <item name="windowNoTitle">true</item>
     </style>
+    <style name="DialogNoAnimation">
+        <item name="android:windowEnterAnimation">@null</item>
+        <item name="android:windowExitAnimation">@null</item>
+    </style>
+
 </resources>

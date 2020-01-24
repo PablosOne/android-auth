@@ -81,7 +81,7 @@ public class LoginDialog extends Dialog {
     private boolean mResultDelivered;
 
     public LoginDialog(Activity contextActivity, AuthorizationRequest request) {
-        super(contextActivity, DEFAULT_THEME);
+        super(contextActivity, R.style.DialogNoTitle);
         mUri = request.toUri();
     }
 
@@ -102,17 +102,18 @@ public class LoginDialog extends Dialog {
 
         mProgressDialog = new ProgressDialog(getContext());
         mProgressDialog.setMessage(getContext().getString(R.string.com_spotify_sdk_login_progress));
-        mProgressDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        //mProgressDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         mProgressDialog.setOnCancelListener(new OnCancelListener() {
             @Override
             public void onCancel(DialogInterface dialogInterface) {
                 dismiss();
             }
         });
+        mProgressDialog.getWindow().setWindowAnimations(R.style.DialogNoAnimation);
 
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
-        getWindow().setBackgroundDrawableResource(android.R.drawable.screen_background_dark_transparent);
+        //getWindow().setBackgroundDrawableResource(android.R.drawable.screen_background_dark_transparent);
 
         setContentView(R.layout.com_spotify_sdk_login_dialog);
 

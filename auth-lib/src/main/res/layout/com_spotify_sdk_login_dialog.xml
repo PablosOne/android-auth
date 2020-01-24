@@ -23,14 +23,13 @@
     android:id="@+id/com_spotify_sdk_login_webview_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:drawable/dialog_frame"
     android:visibility="invisible">
 
     <WebView
         android:id="@+id/com_spotify_sdk_login_webview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="invisible"
-        android:focusable="true"/>
+        android:focusable="true"
+        android:visibility="invisible" />
 
 </LinearLayout>
